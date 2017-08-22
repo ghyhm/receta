@@ -16,7 +16,7 @@ jobs:
       - image: postgres:9.5
         environment:
         - POSTGRES_USER=mandyyan
-        - POSTGRES_DB=receta_development
+        - POSTGRES_DB=receta_test
 
     working_directory: ~/repo
 
