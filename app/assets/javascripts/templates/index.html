@@ -1,6 +1,36 @@
 <header class="row">
   <h1 class="text-center col-md-6 col-md-offset-3">Find Recipes</h1>
 </header>
+<div class="panel-body">
+  <div class="alert alert-success">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert Link</a>.
+  </div>
+  <div class="alert alert-info">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert Link</a>.
+  </div>
+  <div class="alert alert-warning">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert Link</a>.
+  </div>
+  <div class="alert alert-danger">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert Link</a>.
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class='col-sm-6'>
+          <div class="form-group">
+              <div class='input-group date' id='datetimepicker1'>
+                  <input type='text' class="form-control" />
+                  <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
 <section class="row">
   <form>
     <div class="form-group col-md-6 col-md-offset-3">
@@ -9,6 +39,7 @@
     </div>
     <div class="form-group col-md-6 col-md-offset-3 text-center">
       <button ng-click="search(keywords)" class="btn btn-primary btn-lg">Search</button>
+      <button ng-click="newRecipe()" class="btn btn-info btn-lg">New Recipe…</button>
     </div>
   </form>
 </section>
@@ -18,10 +49,9 @@
   <ul class="list-unstyled">
     <li ng-repeat="recipe in recipes">
       <section class="well col-md-6 col-md-offset-3">
-        <h1 class="h3 col-md-6 text-right" style="margin-top: 0"><a href="#">{{recipe.name}}</a></h1>
+        <h1 class="h3 col-md-6 text-right" style="margin-top: 0"><a href ng-click="view(recipe.id)" >{{recipe.name}}</a></h1>
         <div class="col-md-6">
-          <button class="btn btn-info">Edit</button>
-          <button class="btn btn-danger">Delete</button>
+          <button ng-click="edit(recipe.id)" class="btn btn-info">Edit</button>
         </div>
       </section>
     </li>

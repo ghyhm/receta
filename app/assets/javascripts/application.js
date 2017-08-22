@@ -13,5 +13,11 @@
 //= require rails-ujs
 //= require angular/angular
 //= require angular-route/angular-route
+//= require angular-resource/angular-resource
 //= require angular-rails-templates
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap_sb_admin_base_v2
+//= require moment
+//= require bootstrap-datetimepicker
 //= require_tree .
