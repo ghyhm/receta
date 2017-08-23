@@ -60,3 +60,9 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
   config.infer_base_class_for_anonymous_controllers = false
 end
+
+Capybara.register_driver :chrome do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+end
+
+Capybara.javascript_driver = :chrome
