@@ -39,6 +39,10 @@ jobs:
           name: install dependencies
           command: |
             bundle install --jobs=4 --retry=3 --path vendor/bundle
+            mkdir drivers
+            wget https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckodriver-v0.18.0-linux64.tar.gz && tar -zxvf geckodriver-v0.18.0-linux64.tar.gz:
+            PATH="${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/drivers"
+            export PATH
 
       - save_cache:
           paths:
