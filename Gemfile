@@ -26,12 +26,13 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'angular-rails-templates'
-gem 'bower-rails'
+#gem 'bower-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'bootstrap_sb_admin_base_v2'
 gem 'momentjs-rails'
 gem 'bootstrap3-datetimepicker-rails'
+gem 'webpacker'
 
 gem 'foreman'
 
